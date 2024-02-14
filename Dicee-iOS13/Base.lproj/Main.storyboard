@@ -17,37 +17,79 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="AppBreweryBackground" translatesAutoresizingMaskIntoConstraints="NO" id="ZOv-ki-Tq8">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppBreweryBackground" translatesAutoresizingMaskIntoConstraints="NO" id="ZOv-ki-Tq8">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DiceeLogo" translatesAutoresizingMaskIntoConstraints="NO" id="98a-cF-sAK">
-                                <rect key="frame" x="76" y="129" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DiceOne" translatesAutoresizingMaskIntoConstraints="NO" id="iOO-kt-Kh4">
-                                <rect key="frame" x="54" y="424" width="120" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5E2-n0-mdV">
-                                <rect key="frame" x="140" y="678" width="113" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Salla" cornerStyle="capsule">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
-                                    <color key="baseBackgroundColor" red="0.55686277149999996" green="0.1607843041" blue="0.14509806040000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="rollButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bfe-0k-p05"/>
-                                </connections>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DiceOne" translatesAutoresizingMaskIntoConstraints="NO" id="U5b-fc-yjV">
-                                <rect key="frame" x="225" y="424" width="120" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="K9m-Qb-5Dp">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kpV-Rd-5r9" userLabel="Top View">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="252.33333333333334"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DiceeLogo" translatesAutoresizingMaskIntoConstraints="NO" id="98a-cF-sAK">
+                                                <rect key="frame" x="98.666666666666686" y="62.333333333333329" width="196" height="127.99999999999999"/>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="98a-cF-sAK" firstAttribute="centerY" secondItem="kpV-Rd-5r9" secondAttribute="centerY" id="Ymf-vH-75d"/>
+                                            <constraint firstItem="98a-cF-sAK" firstAttribute="centerX" secondItem="kpV-Rd-5r9" secondAttribute="centerX" id="c1S-Xj-m0R"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bAv-Ak-9Io" userLabel="Middle View">
+                                        <rect key="frame" x="0.0" y="253.33333333333331" width="393" height="252.33333333333331"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="51" translatesAutoresizingMaskIntoConstraints="NO" id="Gjg-aG-44b">
+                                                <rect key="frame" x="71" y="76.333333333333371" width="251" height="100"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DiceOne" translatesAutoresizingMaskIntoConstraints="NO" id="iOO-kt-Kh4">
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DiceOne" translatesAutoresizingMaskIntoConstraints="NO" id="U5b-fc-yjV">
+                                                        <rect key="frame" x="151" y="0.0" width="100" height="100"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Gjg-aG-44b" firstAttribute="centerY" secondItem="bAv-Ak-9Io" secondAttribute="centerY" id="Nuj-0m-zod"/>
+                                            <constraint firstItem="Gjg-aG-44b" firstAttribute="centerX" secondItem="bAv-Ak-9Io" secondAttribute="centerX" id="tbv-yn-1nW"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IpX-Ve-hyI" userLabel="Bottom View">
+                                        <rect key="frame" x="0.0" y="506.66666666666657" width="393" height="252.33333333333331"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5E2-n0-mdV">
+                                                <rect key="frame" x="165.33333333333334" y="108.33333333333337" width="62.333333333333343" height="35.666666666666657"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Salla" cornerStyle="capsule">
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
+                                                    <color key="baseBackgroundColor" red="0.55686277149999996" green="0.1607843041" blue="0.14509806040000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="rollButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bfe-0k-p05"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="5E2-n0-mdV" firstAttribute="centerY" secondItem="IpX-Ve-hyI" secondAttribute="centerY" id="LG0-7m-HPb"/>
+                                            <constraint firstItem="5E2-n0-mdV" firstAttribute="centerX" secondItem="IpX-Ve-hyI" secondAttribute="centerX" id="jnU-uW-vgg"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZOv-ki-Tq8" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="8uE-oh-EoN"/>
+                            <constraint firstItem="K9m-Qb-5Dp" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="DlG-qt-MWJ"/>
+                            <constraint firstItem="K9m-Qb-5Dp" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="P3a-Ms-lye"/>
+                            <constraint firstAttribute="bottom" secondItem="ZOv-ki-Tq8" secondAttribute="bottom" id="T1f-1V-tZS"/>
+                            <constraint firstItem="K9m-Qb-5Dp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ton-Ky-RRz"/>
+                            <constraint firstItem="ZOv-ki-Tq8" firstAttribute="leadingMargin" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="cVi-yU-bsU"/>
+                            <constraint firstItem="ZOv-ki-Tq8" firstAttribute="trailingMargin" secondItem="8bC-Xf-vdC" secondAttribute="trailing" constant="-8" id="hpb-HL-G3J"/>
+                            <constraint firstItem="K9m-Qb-5Dp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="oM1-MC-3mY"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="diceImageView1" destination="iOO-kt-Kh4" id="BAI-hc-LYd"/>
@@ -56,7 +98,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+            <point key="canvasLocation" x="135.1145038167939" y="137.32394366197184"/>
         </scene>
     </scenes>
     <resources>
